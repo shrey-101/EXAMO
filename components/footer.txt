@@ -16,3 +16,35 @@
             Copyright - @NaughtyCoders 2021
         </div>
     </footer>
+    
+     <!-- style part(to be included in css) -->
+     *{
+    margin: 0;
+    padding: 0;
+}
+.icons{
+    background-color: rgba(41, 41, 80, 0.966);
+}
+.icons-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+.fa {
+    color: white;
+    padding: 18px;
+    font-size: 33px;
+    width: 33px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+  .copyRight{
+      padding: 0.8rem;
+      color: white;
+      display: flex;
+      justify-content: center;  
+      align-items: center; 
+      background-color: rgb(41, 41, 80);
+  }
