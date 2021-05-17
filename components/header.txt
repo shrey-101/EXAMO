@@ -1,0 +1,17 @@
+<!-- navbar -->
+    <nav class="navbar">
+        <ul class="nav-list background">
+            <div class="logo">EXAMO</div>
+            <div class="list-items">
+                <div class="input"> <input type="email" placeholder="USER-ID">
+                    <input type="password" placeholder="Password">
+                </div>
+                <li><a href="">Login</a></li>
+                <li><a href="homepage.html" class="active">Home</a> </li>
+                <li><a href="">About</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Contact Us</a></li>
+            </div>
+        </ul>
+
+    </nav>
