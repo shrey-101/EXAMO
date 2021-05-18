@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylearp.css">
     <title>Examo</title>
 </head>
 
@@ -32,9 +32,22 @@
 
     </nav>
 
-    <button class="butt2">
-        Create new class
-    </button>
+    <div class="butt2" onclick="pop()" type="button">Create New Class</div>
+    
+      <div id="box">
+    
+        <h1>Create Class</h1>
+        <form>
+            <b><p>Class Name:<input type="text" required></p></b>
+            <b><p>Date:<input type="date" required></p></b>
+            <b><p>Time:<input type="time" required></p></b>
+        </form>
+        <div class="bt">
+            <div class="btt" type="submit" >Create</div>
+            <div class="btt" onclick="pop()" type="button">Cancel</div>
+            
+        </div>
+      </div>
 
     <section>
         <table class="table table-bordered border-light table-dark table-hover">
@@ -52,9 +65,9 @@
                     <td>Maths UNIT-1</td>
                     <td>12/03/2021 - 02:00 PM</td>
                     <td>
-                        <div class="btn">
+                        
                             <button class="btn1">Join</button>
-                        </div>
+                        
                     </td>
                 </tr>
                 <tr>
@@ -62,9 +75,9 @@
                     <td>Maths UNIT-2</td>
                     <td>20/03/2021 - 04:30 PM</td>
                     <td>
-                        <div class="btn">
+                    
                             <button class="btn1">Join</button>
-                        </div>
+                        
                     </td>
                 </tr>
                 <tr>
@@ -72,9 +85,8 @@
                     <td>Maths UNIT-2</td>
                     <td>20/03/2021 - 04:30 PM</td>
                     <td>
-                        <div class="btn">
                             <button class="btn1">Join</button>
-                        </div>
+                        
                     </td>
                 </tr>
             </tbody>
@@ -95,6 +107,28 @@
             Copyright - @NaughtyCoders 2021
         </div>
     </footer>
+
+    <script>
+        var modal = null
+
+ function pop() {
+
+   if(modal === null) {
+
+     document.getElementById("box").style.display = "block";
+
+     modal = true
+
+   } else {
+
+     document.getElementById("box").style.display = "none";
+
+     modal = null
+
+   }
+
+ }
+    </script>
 </body>
 
 </html>
