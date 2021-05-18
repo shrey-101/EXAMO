@@ -106,14 +106,19 @@ body{
     font-weight: 600; 
     color: rgb(0, 0, 0);
 }
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -130px;}
 .btn{
-    padding: 7px;
-    border-radius: 12px;
+    padding: 4px;
+    border-radius: 10px;
     background-color: #4b04809e;
     color: white;
-    margin: 17px 6px;
-    width: 91px;
-    height: 40px;
+    margin: 17px 17px;
+    width: 117px;
+    height: 43px;
 }
 .icons{
     background-color: rgba(41, 41, 80, 0.966);
