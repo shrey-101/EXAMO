@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style-class_proctor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Class | Proctor</title>
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar">
+        <div class="logo"><a href="">EXAMO</a></div>
+        <ul class="nav-list background">
+            
+            <div class="list-items">
+                <li><a href="homepage.html" class="active">Home</a> </li>
+                <li><a href="">About</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Contact Us</a></li>
+            </div>
+        </ul>
+
+    </nav>
+
+    <section class="firstsection ">
+        <div class="box-main">
+            <h2 >DashBoard                                 <div class="class-details" >Class-ID : 12j6d</div></h2><br>            
+            <hr><br><br>
+            
+            <div class="new-test">
+                <button class="btn" >CREATE NEW EXAM</button>
+            </div><br><br><br><br>
+            <div class="old-test">
+                <h2 style="color: rgb(107, 145, 38) ; text-shadow:2px 1px rgb(224, 202, 202);text-decoration:rgb(124, 102, 102) underline;">Previous Exams</h2><br>
+                <table class="example-table">
+                    <thead>
+                        <tr>
+                            <th> Exam Name</th>
+                            <th> Date </th>
+                            <th> Status </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> Physics </td>
+                            <td> 25/05/2021 </td>
+                            <td> <STrong>Pending</STrong> </td>
+                            
+                        </tr>
+                        <tr>
+                            <td> Maths </td>
+                            <td> 19/05/2021 </td>
+                            <td><strong>Completed</strong>  </td>
+                            
+                        </tr>
+                        <tr>
+                            <td> Chemistry</td>
+                            <td>  13/05/2021</td>
+                            <td>  <strong>Completed</strong></td>
+                        </tr>
+                      
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="foot">
+        <div class="icons">
+            <ul class="icons-list">
+                <li><a href="#" class="fa fa-facebook"></a></li>
+                <li><a href="#" class="fa fa-twitter"></a></li>
+                <li><a href="#" class="fa fa-github"></a></li>
+                <li><a href="#" class="fa fa-linkedin"></a></li>
+            </ul>
+        </div>
+        <div class="copyRight">
+            Copyright - @NaughtyCoders 2021
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.8/jquery.slimscroll.min.js"></script>
+    <script>
+        $('.example-table tbody').slimscroll({
+            height: '160px',
+            alwaysVisible: true,
+            color: '#333'
+        })
+    </script>
+</body>
+
+</html>
