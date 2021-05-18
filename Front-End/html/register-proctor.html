@@ -31,13 +31,13 @@
 <!-- Form-->
     <section class="register-form">
         <h2><center>REGISTER AS PROCTER</center></h2> <br>
-       <form action="#" method="POST">
+       <form action="register-as-proctor.php" method="POST">
         <label for="name"> Name: </label> <br>
-        <input type="text" id="fullname" required placeholder="Enter your full Name" autocomplete="name"/> <br><br>
+        <input type="text" id="fullname" name="fullname" required placeholder="Enter your full Name" autocomplete="name"/> <br><br>
         <label for="email">E-mail: </label> <br>
-        <input type="email" id="email" required placeholder="Enter Email"/> <br><br>
+        <input type="email" id="email" name="email" required placeholder="Enter Email"/> <br><br>
         <label for="institute">Institute/company name: </label> <br>
-        <input type="text" id="institute" required placeholder="Enter your institute name"/> <br><br>
+        <input type="text" id="institute" name="institute" required placeholder="Enter your institute name"/> <br><br>
 
         <center><input type="submit" name="register" value="Register"></center>
        </form>
