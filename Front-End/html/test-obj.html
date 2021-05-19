@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="style-test-obj.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@300&display=swap" rel="stylesheet">
     <title>Examo</title>
@@ -48,15 +48,14 @@
                 </p>
             </div>
             
-            <fieldset><div class="test"><P class="que">2. The answer is really big:<BR>
-            <input type="radio" name="2. The answer is really big" value="maison">The Answer<BR>
-            <input type="radio" name="2. The answer is really big" value="valise">Really big<BR>
-            <input type="radio" name="2. The answer is really big" value="soleil"> 
-            An elephant<BR>
-            <input type="radio" name="2. The answer is really big" value="poisson">The data given is insufficient<BR>
+            <div class="test"><P class="que">2. The answer is really big:<BR>
+                <input type="radio" name="2. The answer is really big" value="maison">The Answer<BR>
+                <input type="radio" name="2. The answer is really big" value="valise">Really big<BR>
+                <input type="radio" name="2. The answer is really big" value="soleil"> 
+                An elephant<BR>
+                <input type="radio" name="2. The answer is really big" value="poisson">The data given is insufficient<BR>
             </p>
             </div>
-        </fieldset>
             
             <div class="test"><P class="que">3. What makes Aryan Tiwari so smart:<BR>
             <input type="radio" name="3. What makes Aryan Tiwari so smart" value="renard">his looks<BR>
@@ -92,6 +91,17 @@
             Copyright - @NaughtyCoders 2021
         </div>
     </footer>
+
+    <script>
+        window.addEventListener("beforeunload", function (e) {
+            var confirmationMessage = 'It looks like you have been editing something. '
+                                    + 'If you leave before saving, your changes will be lost.';
+    
+            (e || window.event).returnValue = confirmationMessage; //Gecko + IE
+            return confirmationMessage; //Gecko + Webkit, Safari, Chrome etc.
+        });
+    </script>
+    
 
 </body>
 
