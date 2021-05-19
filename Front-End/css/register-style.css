@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: teal;
+}
+
+.navbar{
+    display: flex;
+    
+}
+.nav-list{
+    background-color: rgb(41, 41, 80);
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.nav-list li{
+    
+   list-style: none;
+   padding: 1em; 
+
+}
+.list-items{
+    display: flex;
+    align-items:flex-end;
+}
+.list-items input{
+    margin: 3px;
+    border-radius: 5px;
+    height: 22px;
+}
+.input{
+    display: flex;
+    padding: 4px;
+    margin-left: 340px;
+    margin-bottom: 6px;
+}
+.nav-list li a{
+    
+   text-decoration: none;
+    color: white;
+}
+.nav-list li a:hover{
+    text-decoration: none;
+     color: rgb(160, 224, 10);
+ }
+.logo{
+    margin-left: 1rem;
+    color: rgb(116, 214, 214);
+    display: inline;
+    font-size: 2.2em;
+    font-family: cursive;
+    font-weight: 700;
+    cursor: pointer;
+}
+.icons{
+    background-color: rgba(41, 41, 80, 0.966);
+}
+.icons-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+.fa {
+    color: white;
+    padding: 18px;
+    font-size: 33px;
+    width: 33px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+  .copyRight{
+      padding: 0.8rem;
+      color: white;
+      display: flex;
+      justify-content: center;  
+      align-items: center; 
+      background-color: rgb(41, 41, 80);
+  }
+.register-form{
+   margin: 80px 30%;
+   width: 30%;
+   padding: 20px 5%;
+   box-shadow: 20px 20px 50px #004642, 
+            -30px -30px 60px #00ffff;
+   border-radius: 30px;
+}
+.register-form label{
+    margin: 20px 0px;
+    font-size: medium;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.register-form input[type=text], .register-form input[type=email], .register-form input[type=password] {
+    font-size: medium;
+    width: 100%;
+    padding: 7px 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: rgba(0, 128, 128, 0.473);
+    color: black;
+    box-shadow: 10px 10px 6px rgb(1, 56, 56),
+                -5px -5px 4px rgb(2, 180, 180);
+}
+.register-form input::placeholder{
+    color: rgba(0, 0, 0, 0.671);
+}
+
+.register-form input[type=submit]{
+width: 80%;
+padding: 8px 10px;
+cursor: pointer;
+background-color: tomato;
+color: white;
+font-size: medium;
+border-radius: 4px;
+}
+.register-form input[type=submit]:hover{
+    color: black;
+    background-color: turquoise;
+    box-shadow: 10px 10px 10px rgba(22, 49, 47, 0.74),
+                -10px -10px 10px rgba(69, 151, 146, 0.74);
+}
+.input input{
+    padding: 3px 8px;
+}
+.register-form h2{
+    color: rgb(230, 230, 230);
+}
+.register-form input[type=file]{
+   font-size: medium;
+}
