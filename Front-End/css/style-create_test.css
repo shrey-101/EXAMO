@@ -100,7 +100,9 @@ body{
     margin-left:3rem;
     margin-top: -2rem;
 }
-
+.basic-info div{
+    padding: 1rem;
+}
 .form-details{
     padding: 10px;
     font-weight: 500;
