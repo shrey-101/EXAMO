@@ -1,12 +1,9 @@
-<!-- navbar -->
+<!-- navbar html file part-->
     <nav class="navbar">
+        <div class="logo"><a href="">EXAMO</a></div>
         <ul class="nav-list background">
-            <div class="logo">EXAMO</div>
+
             <div class="list-items">
-                <div class="input"> <form action="" method="POST"> <input type="email" placeholder="USER-ID">
-                    <input type="password" placeholder="Password">
-                </div>
-                    <li><a href="">Login</a></li> </form>
                 <li><a href="homepage.html" class="active">Home</a> </li>
                 <li><a href="">About</a></li>
                 <li><a href="">Services</a></li>
@@ -16,11 +13,16 @@
 
     </nav>
     
-    <!-- style part(to be included in css) -->
-    *{
+    <!-- navbar css file part , just copy and paste ) -->
+   @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=KoHo:wght@300&family=Pangolin&family=Ubuntu:wght@300&display=swap');
+*{
     margin: 0;
     padding: 0;
-}.navbar{
+}
+body{
+    background-color: rgb(115, 247, 203);
+}
+.navbar{
     display: flex;
     
 }
@@ -28,29 +30,19 @@
     background-color: rgb(41, 41, 80);
     width: 100%;
     display: flex;
-    align-items: center;
+    justify-content: flex-end;
 }
 .nav-list li{
     
    list-style: none;
-   padding: 1em; 
+   padding: 1.3em; 
 
 }
 .list-items{
     display: flex;
     align-items:flex-end;
 }
-.list-items input{
-    margin: 3px;
-    border-radius: 5px;
-    height: 22px;
-}
-.input{
-    display: flex;
-    padding: 4px;
-    margin-left: 340px;
-    margin-bottom: 6px;
-}
+
 .nav-list li a{
     
    text-decoration: none;
@@ -61,10 +53,14 @@
      color: rgb(160, 224, 10);
  }
 .logo{
-    margin-left: 1rem;
-    color: rgb(116, 214, 214);
+    background-color: rgb(41, 41, 80);
     display: inline;
+}
+.logo a{
+    color: rgb(116, 214, 214);    
     font-size: 2.2em;
     font-family: cursive;
     font-weight: 700;
+    margin-left: 1em;
+    text-decoration: none;
 }
