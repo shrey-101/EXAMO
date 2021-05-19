@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style-class_proctor.css">
+    <link rel="stylesheet" href="../css/style-create_test.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Class | Student</title>
+
+    <title>Create Exam</title>
 </head>
 
 <body>
@@ -28,11 +29,71 @@
     </nav>
     <section class="firstsection">
         <div class="box-main">
-            <h2 style="display: flex;
-            justify-content: center;
-            color: crimson;
-            text-shadow: 3px 3px 6px cornflowerblue;;">Create A New Exam</h2><hr style="margin: 2em;margin-block-end: 2em;border-width: 2px;">
+            <h2>Create A New Exam</h2>
+            <hr>
+            <div class="info">
 
+                <!--basic details form -->
+
+                <div class="basic-details">
+                    <span class="arrow">Basic Information</span>
+                    <form action="" class="basic-info">
+                        <div>
+                            <span class="form-details">Exam Name :</span>
+                            <input type="text" class="detail-box" title="enter the exam name"
+                                placeholder="enter the exam name">
+
+                            <span class="form-details">Exam Duration :</span>
+                            <input type="time" class="detail-box" title="Start of exam">to <input type="time"
+                                class="detail-box" title="End of exam">
+                        </div>
+                        <div>
+                            <span class="form-details">Exam Type : </span>
+                            <input type="radio" id="examtype1" name="qtype"><label for="examtype1"
+                                style="font-weight: 450;padding: 10px;">Multiple Choice
+                                Questions(mcqs)</label>
+                            <input type="radio" id="examtype2" name="qtype"><label for="examtype2"
+                                style="font-weight: 450;padding: 10px;">Subjective</label>
+                        </div>
+                        <div>
+                            <span class="form-details">Number Of Questions :</span>
+                            <input type="number" class="detail-box" title="enter the number of Questions"
+                                style="width: 3rem;">
+
+
+                        </div>
+                        <div>
+                            <span class="form-details">Negative Marking :</span>
+                            <input type="radio" id="n-mark1" name="negative-marking"><label for="n-mark1"
+                                style="font-weight: 450;padding: 10px;">YES
+                            </label>
+                            <input type="radio" id="n-mark2" name="negative-marking"><label for="n-mark2"
+                                style="font-weight: 450;padding: 10px;margin-right: 3rem;">NO</label>
+
+                            <span class="form-details">Negative marks :</span>
+                            <input type="number" class="detail-box" title="enter 0 for NO" id="marks"
+                                style="width: 3rem;"><label for="marks" style="background-color: rgb(19, 196, 196);
+                            padding: 3px;
+                            padding-inline: 10px;
+                            margin-left: 1rem;
+                            font-size: smaller;
+                            border: none;
+                            border-radius: 10px;
+                            color: rgb(110, 100, 100);">enter
+                                0 for NO</label>
+                            <hr>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Questions details  -->
+
+                <div class="ques-details">
+                    <span class="arrow">Questions</span>
+
+                </div>
+
+            </div>
         </div>
     </section>
 
