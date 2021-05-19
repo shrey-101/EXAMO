@@ -51,8 +51,6 @@ body{
 .firstsection{
     height: 100vh;   
 }
-
-
 .box-main{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     max-width: 86%;
@@ -61,11 +59,58 @@ body{
     margin-top: 1em;
     margin-bottom: 1em;
     padding: 47px;
-    border-radius: 2rem;
-    background-color: rgb(233, 249, 250);
+    border-radius: 1rem;
+    background-color: rgb(255, 255, 255);
     box-shadow: 10px 10px 10px rgb(192 183 201)
 }
 
+.box-main h2{
+    display: flex;
+    justify-content: center;
+    color: crimson;
+    text-shadow: 3px 3px 6px cornflowerblue;
+}
+.box-main hr{
+    margin: 2em;
+    margin-block-end: 2em;
+    border-width: 2px;
+}
+
+.basic-details{
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+.arrow {
+    border: 1px solid #456cc3;
+    border-left: none;
+    border-radius: 6px 1rem 1rem 6px;
+    padding: 4px;
+    background-color: #c33131f2;;
+    color: white;
+    font-family: system-ui;
+    font-weight: 500;
+    box-shadow: 2px 3px 6px #a77e7ee0;
+    height: 1rem;
+}
+.basic-info{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    margin-left:3rem;
+    margin-top: -2rem;
+}
+
+.form-details{
+    padding: 10px;
+    font-weight: 500;
+}
+.detail-box{
+    padding: 3px;
+    border: 2px solid #ff0000a8;
+    border-radius: 8px;
+    margin-right: 10px;
+}
 .icons{
     background-color: rgba(41, 41, 80, 0.966);
 }
