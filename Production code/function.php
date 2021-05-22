@@ -208,7 +208,14 @@ function checkProctor($id){
 
 
 function getquestions($exam_code){
+    include 'database.php';
+    $sql = "SELECT * FROM exams WHERE exam_code = '$exam_code'";
+    if($conn->query($sql)){
+        
+    }
+    else{
 
+    }
 }
 
 function join_test($exam_code, $email){
@@ -276,5 +283,49 @@ function load_exam($email){
     else{
         echo "<i> No Test avilable </i>";
     }
+}
+
+function checkifstart($dateOf, $timestart, $timeend){
+    $mydate=getdate(date("U"));
+    $todaydate = $mydate['year'] . "-" . $mydate['mon'] . "-" . $mydate['mday'];
+    $dateOf = strtotime($dateOf);
+    $todaydate = strtotime($todaydate);
+
+    if($dateOf == $todaydate){
+        $todaytime = $mydate['hours'] . ":" . $mydate['minutes'] . ":" . $mydate['seconds'];
+        $todaytime = strtotime($todaytime) + 12601;
+        $timestart = strtotime($timestart);
+        $timeend = strtotime($timeend);
+        if($todaytime >= $timestart && $todaytime < $timeend){
+            return 1;
+        }
+        else{
+            return 0;
+        }
+
+    }
+    else{
+        return 0;
+    }
+}
+
+function examattempt($email, $exam_code){
+    include 'database.php';
+    $sql = "SELECT * FROM exam_attempt WHERE email = '$email' AND exam_code = '$exam_code'";
+    $resul = $conn->query($sql);
+    if($resul->num_rows  > 0){
+        return 1;
+    }
+    else{
+        return 0;
+    }
+}
+
+function getname($id){
+    include 'database.php';
+    $sql = "SELECT fullname from userinfo WHERE id= '$id'";
+    $resul = $conn->query($sql);
+    $row = $resul->fetch_assoc();
+    return $row['fullname'];
 }
 ?>
