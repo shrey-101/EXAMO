@@ -8,7 +8,7 @@ if(!isset($_SESSION['ID'])){
 $id = $_SESSION['ID'];
 $email = $_SESSION['email'];
 if(!checkProctor($id)){
-    header("location: index.php");
+    header("location: dashboard-examinee.php");
 }
 if(isset($_POST['submit'])){
     $exam_code = createexamcode();
@@ -19,72 +19,42 @@ $dateofExam = $_POST['dateofExam'];
 $qtype = $_POST['qtype'];
 $noQuestion = $_POST['noQuestion'];
 
-$sql = "INSERT INTO exams (exam_code, exam_name, exam_type, dateOf, timestart, timeend, proctor) values ('$exam_code', '$examname', '$qtype', '$dateofExam', '$starttime', '$endtime', '$email') ";
+
+$sql = "INSERT INTO exams (exam_code, exam_name, exam_type, dateOf, timestart, timeend, noQuestion, proctor) values ('$exam_code', '$examname', '$qtype', '$dateofExam', '$starttime', '$endtime', '$noQuestion', '$email') ";
 if($conn->query($sql)){
-    $sqlcode = 'CREATE TABLE ' . $exam_code . '( ID INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, exam_name TEXT NOT NULL ,';
-    if($qtype == 'mcq'){
-        for($num = 1; $num <= $noQuestion; $num++){
-            $sqlcode .= ' inputquestion'. $num . ' TEXT NOT NULL ,';
-            $sqlcode .= ' inputoption'. ($num - 1) * 4 + 1 . ' TEXT NOT NULL ,';
-            $sqlcode .= ' inputoption'. ($num - 1) * 4 + 2 . ' TEXT NOT NULL ,';
-            $sqlcode .= ' inputoption'. ($num - 1) * 4 + 3 . ' TEXT NOT NULL ,';
-            $sqlcode .= ' inputoption'. ($num - 1) * 4 + 4 . ' TEXT NOT NULL ,';
-        }
-    }
-    else{
-        for($num = 1; $num <= $noQuestion; $num++){
-            $sqlcode .= ' inputquestion'. $num . ' TEXT NOT NULL ,';
-        }
-    }
-    $sqlcode .= ' proctor TEXT NOT NULL)';
-
-
-    $sql = "$sqlcode";
-    if($conn->query($sql)){
-
-    //     $sqlcode2 = "INSERT INTO " . $exam_code . "(examname, ";
-    //     if($qtype == 'mcq'){
-    //         for($num = 1; $num <= $noQuestion; $num++){
-    //             $sqlcode2 .= ' inputquestion'. $num . ' ,';
-    //             $sqlcode2 .= ' inputoption'. ($num - 1) * 4 + 1 . ' ,';
-    //             $sqlcode2 .= ' inputoption'. ($num - 1) * 4 + 2 . ' ,';
-    //             $sqlcode2 .= ' inputoption'. ($num - 1) * 4 + 3 . ' ,';
-    //             $sqlcode2 .= ' inputoption'. ($num - 1) * 4 + 4 . ' ,';
-    //         }
-    //     }
-    //     else{
-    //         for($num = 1; $num <= $noQuestion; $num++){
-    //             $sqlcode2 .= ' inputquestion'. $num . ' ,';
-    //         }
-    //     }
-    //             $sqlcode2 .= ' proctor) VALUES ( ';
-
-    //     if($qtype == 'mcq'){
-    //         for($num = 1; $num <= $noQuestion; $num++){
-    //             $sqlcode2 .= '\' inputquestion" . $num . \' ,';
-    //             $sqlcode2 .= " inputoption". ($num - 1) * 4 + 1 . " ,";
-    //             $sqlcode2 .= " inputoption". ($num - 1) * 4 + 2 . " ,";
-    //             $sqlcode2 .= " inputoption". ($num - 1) * 4 + 3 . " ,";
-    //             $sqlcode2 .= " inputoption". ($num - 1) * 4 + 4 . " ,";
-    //         }
-    //     }
-    //     else{
-    //         for($num = 1; $num <= $noQuestion; $num++){
-    //             $sqlcode2 .= ' inputquestion'. $num . ' ,';
-    //         }
-    //     }
-    //     $sqlcode2 .= '\' . $email) . \'';
-    
+// $count = 0;
+//     if($qtype == 'mcq'){
+//         for($num = 1; $num <= $noQuestion; $num++){
+//             $temp =  $_POST['questioninput' . $num ];
+//             $temp1 = $_POST['optioninput' . ($num -1)*4 + 1 ];
+//             $temp2 = $_POST['optioninput' . ($num -1)*4 + 2 ];
+//             $temp3 = $_POST['optioninput' . ($num -1)*4 + 3 ];
+//             $temp4 = $_POST['optioninput' . ($num -1)*4 + 4 ];
+//             $sqlcode = 'INSERT INTO question (questioninput, optioninput1, optioninput2, optioninput3, optioninput4, exam_code) VALUES (\'' . $temp . '\', \'' . $temp1 . '\',\' ' . $temp2 . '\',\' ' . $temp3 . '\',\' ' . $temp4 . '\', \'' . $exam_code . '\')';
+//            if(!$conn->query($sqlcode)){
+//                $count++;
+//                echo "Error creating table: " . mysqli_error($conn);
+//            }
+//         }
+//     }
+//     else{
+//         for($num = 1; $num <= $noQuestion; $num++){
+//             $temp = $_POST['questioninput' . $num ];
+//             $sqlcode = 'INSERT INTO question (questioninput, exam_code) VALUES (\'' . $temp . ' \',\' ' . $exam_code . '\')';
+//             if(!$conn->query($sqlcode)){
+//                 $count++;
+//                 echo "Error creating table: " . mysqli_error($conn);
+//             }
+//         }
+//     }
+//     if($count == 0){
 
         header("location: dashboard-proctor.php");
     }
     else{
         echo "Error creating table: " . mysqli_error($conn);
     }
-}
-else{
-    echo "error occured";
-}
+
 }
 
 ?>
@@ -110,10 +80,11 @@ else{
         <ul class="nav-list background">
 
             <div class="list-items">
-                <li><a href="homepage.html" class="active">Home</a> </li>
+                <li><a href="index.php" class="active">Home</a> </li>
                 <li><a href="">About</a></li>
                 <li><a href="">Services</a></li>
                 <li><a href="">Contact Us</a></li>
+                <li><a href="dashboard-proctor.php">DASHBOARD</a></li>
             </div>
         </ul>
 
@@ -151,7 +122,6 @@ else{
                         <div>
                             <span class="form-details">Number Of Questions :</span>
                             <input type="number" name="noQuestion" class="detail-box" placeholder="" style="width: 3rem;" id="noQuestions" required>
-                            <a id="nextadd" style="padding: 5px 10px; background-color:red; color: white; font-size:medium"> Save </a>
 
                         </div>
                         <!-- <div>
@@ -211,60 +181,64 @@ else{
     </footer>
 
     <script>
-    function appendQuestionSub(num){
+    // function appendQuestionSub(num){
         
-        var local = '<div style="border: 2px solid black" class="questioninput"> Question: '+ num +' <br> <textarea required style="width: 500px; font-size:medium; padding: 5px 15px" name="inputquestion'+num+'"> </textarea> <br> </div>';
-        $("#question").append(local);            
-    }
+    //     var local = '<div style="border: 2px solid black" class="questioninput"> Question: '+ num +' <br> <textarea required style="width: 500px; font-size:medium; padding: 5px 15px" name="inputquestion'+num+'"> </textarea> <br> </div>';
+    //     $("#question").append(local);            
+    // }
 
-    function appendQuestionMcq(num){
-        var local = '<div style="border: 2px solid black" class="questioninput"> Question: '+ num +' <br> <input required type="text" required style="width: 500px; font-size:medium; padding: 5px 15px" name="inputquestion'+num+'"> <br><br> Option1: <input type="text" name="inputoption' +((num-1)*4 + 1 )+ '" required> <br><br> Option2: <input type="text" name="inputoption' + ((num-1)*4 + 2 )+ '" required> <br><br> Option3: <input type="text" name="inputoption' + ((num-1)*4 + 3) + '" required> <br><br> Option4: <input type="text" name="inputoption' + ((num-1)*4 + 4) + '" required> <br> </div>';
-        $("#question").append(local);  
-    }
+    // function appendQuestionMcq(num){
+    //     var local = '<div style="border: 2px solid black" class="questioninput"> Question: '+ num +' <br> <input required type="text" required style="width: 500px; font-size:medium; padding: 5px 15px" name="inputquestion'+num+'"> <br><br> Option1: <input type="text" name="inputoption' +((num-1)*4 + 1 )+ '" required> <br><br> Option2: <input type="text" name="inputoption' + ((num-1)*4 + 2 )+ '" required> <br><br> Option3: <input type="text" name="inputoption' + ((num-1)*4 + 3) + '" required> <br><br> Option4: <input type="text" name="inputoption' + ((num-1)*4 + 4) + '" required> <br> </div>';
+    //     $("#question").append(local);  
+    // }
 
-        var x = document.getElementById("noQuestions");
-        var y = document.getElementById("nextadd");
+    //     var x = document.getElementById("noQuestions");
+    //     var y = document.getElementById("nextadd");
 
-        var q_type = 'unset';
-            document.getElementById("examtype1").addEventListener("change", function(){
-                q_type = 'mcq';
-            })
-            document.getElementById("examtype2").addEventListener("change", function(){
-                q_type = 'subjective';
-            })
+    //     var q_type = 'unset';
+    //         document.getElementById("examtype1").addEventListener("change", function(){
+    //             q_type = 'mcq';
+    //         })
+    //         document.getElementById("examtype2").addEventListener("change", function(){
+    //             q_type = 'subjective';
+    //         })
           
-        y.addEventListener("click", function() {
-            $("#question").html(" ");
-            if(q_type == 'subjective'){
-            var i_max = x.value;
-            for(var i = 1; i <= x.value; i++){
-                appendQuestionSub(i);
-            }
-        }
-        else{
-            var i_max = x.value;
-            for(var i = 1; i <= x.value; i++){
-                appendQuestionMcq(i);
-            }
-            refreshCSS();
-        
-        }
+    //     y.addEventListener("click", function() {
+    //         $("#question").html(" ");
+    //         var local = '<form method="POST" action=""';
+    //     $("#question").append(local);  
 
-        })
+    //         if(q_type == 'subjective'){
+    //         var i_max = x.value;
+    //         for(var i = 1; i <= x.value; i++){
+    //             appendQuestionSub(i);
+    //         }
+    //     }
+    //     else{
+    //         var i_max = x.value;
+    //         for(var i = 1; i <= x.value; i++){
+    //             appendQuestionMcq(i);
+    //         }
+    //         refreshCSS();        
+    //     }
+    //     var local = '<br><center><input type="submit" name="questionsubmit" value="Submit"> </center> <br>';
+    //     $("#question").append(local);  
+
+    //     })
 
 
-        refreshCSS = () => {
-            let links = document.getElementsByTagName('link');
-            for (let i = 0; i < links.length; i++) {
-                if (links[i].getAttribute('rel') == 'stylesheet') {
-                    let href = links[i].getAttribute('href').split('?')[0];
+        // refreshCSS = () => {
+        //     let links = document.getElementsByTagName('link');
+        //     for (let i = 0; i < links.length; i++) {
+        //         if (links[i].getAttribute('rel') == 'stylesheet') {
+        //             let href = links[i].getAttribute('href').split('?')[0];
                       
-                    let newHref = href + '?version=' + new Date().getMilliseconds();
+        //             let newHref = href + '?version=' + new Date().getMilliseconds();
                       
-                    links[i].setAttribute('href', newHref);
-                }
-            }
-        }
+        //             links[i].setAttribute('href', newHref);
+        //         }
+        //     }
+        // }
     // var d = new Date();
     // var z = document.getElementById("dateOfExam");
     // z.setAttribute("min", d.getFullYear + '-' + d.getMonth + '-' + d.getDate);
