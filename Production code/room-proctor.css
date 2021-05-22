@@ -142,6 +142,12 @@ form input[type=submit]{
     color: white;
     font-size: x-large;
 }
+form input[type=reset]{
+    padding: 5px 10px;
+    background-color: tomato;
+    color: white;
+    font-size: x-large;
+}
 .breakarrow{
  font-family: sans-serif;
   margin: 10px auto;
@@ -171,4 +177,12 @@ form input[type=submit]{
     right: 0;
     top: 50%;
     position: absolute;
+}
+.w3-proctor{
+    border: 2px solid black;
+    background-color: green;
+    color: white;
+    padding: 20px 40px;
+    margin: 20px 40px;
+    display: none;
 }
