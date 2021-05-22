@@ -10,15 +10,24 @@ Our webapp EXAMO provides a platform for users to conduct and give exams in a se
   <a href="#"></a>
   
 ## Presentation Link:
-  <a href="#">  </a>
+  <a href="https://drive.google.com/file/d/1GL7kBUb6mPZVSZwCThpsfV3O2TgnSAYO/view?usp=sharing">EXAMO </a>
   
   
 ## Table of Contents:
+- Authentication system for STUDENT's and PROCTOR's.
+- Exam management system to create and join test.
+- Date time validation so that no one can access it before or after time.
+- Random user code.
+- Exam code generators with no repetition.
+- Automatic submission of exam on Tab change.
+- WEB RTC webcam streaming(not fully implemented).
+- Multiple proctors.
 
 ## Technology Stack:
   1) Front-end tools(HTML,CSS,JS)
-  2) PHP, Database 
+  2) PHP, MYSQL
   3) API
+  4) WEBRTC
   
   
 
