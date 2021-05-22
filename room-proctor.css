@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=KoHo:wght@300&family=Pangolin&family=Ubuntu:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(115, 247, 203);
+}
+.navbar{
+    display: flex;
+    
+}
+.nav-list{
+    background-color: rgb(41, 41, 80);
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.nav-list li{
+    
+   list-style: none;
+   padding: 1.3em; 
+
+}
+.list-items{
+    display: flex;
+    align-items:flex-end;
+}
+
+.nav-list li a{
+    
+   text-decoration: none;
+    color: white;
+}
+.nav-list li a:hover{
+    text-decoration: none;
+     color: rgb(160, 224, 10);
+ }
+.logo{
+    background-color: rgb(41, 41, 80);
+    display: inline;
+}
+.logo a{
+    color: rgb(116, 214, 214);    
+    font-size: 2.2em;
+    font-family: cursive;
+    font-weight: 700;
+    margin-left: 1em;
+    text-decoration: none;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.icons{
+    background-color: rgba(41, 41, 80, 0.966);
+}
+.icons-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+.fa {
+    color: white;
+    padding: 18px;
+    font-size: 33px;
+    width: 33px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+  .copyRight{
+      padding: 0.8rem;
+      color: white;
+      display: flex;
+      justify-content: center;  
+      align-items: center; 
+      background-color: rgb(41, 41, 80);
+  }
+  .foot{
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    bottom: 0;
+  }
+
+  .container{
+    margin-top: 6%;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  
+  } 
+  .left{
+      padding-left: 30px;
+    left: 0;
+    width: 63%;
+  }
+  .right{
+    margin-top: 5%;
+    margin-bottom: 10%;
+    width: 30%;
+    right: 0;
+    border-left: 2px solid black;
+    padding-left: 50px;
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+form label{
+display: inline-block;
+padding: 10px 30px;
+width: 130px;
+font-size: large;
+}
+form label[for=option]{
+    padding: 10px 60px;
+    width: 100px;
+}
+form input[type=text]{
+    width: 300px;
+    padding: 3px 10px; 
+    border-radius: 5px;
+    font-size: large;
+}
+form input[type=time], form input[type=date]{
+    width: 150px;
+    padding: 6px 15px; 
+    border-radius: 5px;
+    font-size: large;
+}
+form input[type=submit]{
+    padding: 5px 10px;
+    background-color: tomato;
+    color: white;
+    font-size: x-large;
+}
+.breakarrow{
+ font-family: sans-serif;
+  margin: 10px auto;
+  color: tomato;
+  text-align: center;
+  font-size: 30px;
+  max-width: 600px;
+  position: relative;
+}
+.breakarrow::before{
+  content: "";
+  display: block;
+  width: 180px;
+  height: 2px;
+  background: tomato;
+  left: 0;
+  top: 50%;
+  position: absolute;
+
+}
+.breakarrow::after{
+    content: "";
+    display: block;
+    width: 180px;
+    height: 2px;
+    background: tomato;
+    right: 0;
+    top: 50%;
+    position: absolute;
+}
