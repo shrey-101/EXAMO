@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=KoHo:wght@300&family=Pangolin&family=Ubuntu:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(115, 247, 203);
+  font-family: 'Newsreader', serif;
+}
+.navbar {
+  display: flex;
+}
+
+.myContain{
+    background-color: white;
+    width: 80%;
+    margin-left: 10%;
+    box-shadow: 17px 20px #405252;
+    padding-top: 7%;
+    border-radius: 6px;
+}
+
+.headin1{
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 2.5rem;
+    font-weight: 00;
+    line-height: 2.6;
+    text-align: center;
+    color: black;
+    font-size: 40px;
+}
+
+.que{
+    font-weight: bolder;
+}
+
+.Testbtn{
+    margin-left: 10%;
+    padding: 7px;
+    margin-bottom: 15%;
+    margin-top: 0px;
+    font-weight: bolder;
+}
+
+.Testbtn1{
+    background-color: rgb(41, 41, 80);
+    color: white;
+    border: none;
+    padding: 8px;
+    font-weight: bolder;
+    border-radius: 10px;
+}
+
+.Testbtn :hover{
+    background-color: rgb(23, 23, 45);
+    color: rgb(110, 255, 255);
+    transition: all;
+    transition-duration: 500ms;
+    border-radius: 12px;
+}
+
+.test{
+    margin-left: 10%;
+    padding: 1.5%;
+    line-height: 1.5;
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: 'Newsreader', serif;
+}
+.container{
+
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  
+  } 
+  .left{
+      padding-left: 30px;
+    left: 0;
+    width: 70%;
+  }
+  .right{
+   
+    margin-bottom: 10%;
+    width: 30%;
+    right: 0;
+    border-left: 2px solid black;
+}

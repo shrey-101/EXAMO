@@ -46,6 +46,13 @@ body{
     text-decoration: none;
      color: rgb(160, 224, 10);
  }
+ .active{
+     color: powderblue;
+
+ }
+ .active:active{
+     color: powderblue;
+ }
 .logo{
     margin-left: 1rem;
     color: rgb(116, 214, 214);
