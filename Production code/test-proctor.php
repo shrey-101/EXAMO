@@ -118,6 +118,18 @@ else{
         echo "Database error  ". mysqli_error($conn);
     }
     }
+
+
+    if(isset($_POST['addproctor'])){
+        $email3 = $_POST['code_proctor'];
+        $sql = "INSERT into exams (exam_code, proctor) VALUES ('$exam_code',  '$email3')";
+        if($conn->query($sql)){
+
+        }
+        else{
+            echo mysqli_error($conn);
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -131,6 +143,18 @@ else{
     <title> Room | Examo </title>
 </head>
 <body>
+<script> 
+function addproctor(){
+    var z = document.getElementById("addproctor");
+    if(z.style.display === 'none'){
+        z.style.display = "block";
+    }
+    else{
+        z.style.display = "none"; 
+    }
+}
+
+</script>
 <nav class="navbar">
         <div class="logo"><a href="">EXAMO</a></div>
         <ul class="nav-list background">
@@ -149,6 +173,17 @@ else{
 
 <div class="container left">
 <div class="centered1">
+ <center>   <button onclick="addproctor()" style="background-color: green; color:white; padding: 4px 10px"> ADD PROCTOR </button>
+ <br><br>
+ <div class="w3-proctor" id="addproctor">
+  <form method="POST" action="">
+   <label> Proctor email: </label> <input type="email" name="code_proctor" placeholder="Enter the email of proctor"> <br><br><br><br>
+    <input type="submit" name="addproctor" value="ADD">
+    <input type="reset"  value="CANCEL" id="closemodel" onclick="addproctor()">
+  </form>
+ </div>
+ </center> 
+ <br><br>
     <!-- <?php getquestions($exam_code) ?> -->
   
     <form action="" method="POST">
@@ -278,6 +313,7 @@ else{
     ?>
  
 </div>
+
 
 
 <!-- 
