@@ -19,12 +19,12 @@
         <div class="list-items">
             <div class="input"> <form action="http://localhost/ext/script.php" method="POST"><input type="email" placeholder="USER-ID" name="email">
                 <input type="password" placeholder="Password" name="psw">
-            </div>
-            <li><input type="submit" name="submit" value="log In" style="background-color: green; color: white"></li></form>
-                <li><a href="homepage.html" class="active">Home</a> </li>
-                <li><a href="">About</a></li>
+            
+            <input type="submit" name="submit" value="log In" style="background-color: green; color: white; padding: 0px 15px;"></form></div>
+                <li><a href="homepage.html" class="active" style="color: powerblue">Home</a> </li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="">Services</a></li>
-                <li><a href="">Contact Us</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
             </div>
         </ul>
 
