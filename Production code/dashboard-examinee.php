@@ -76,7 +76,7 @@ document.addEventListener("visibilitychange", function() {
             <b><p> Test Code : <input type="text" name="newtestcode" autocomplete="off" required></p></b>
       
         <div class="bt">
-            <input class="btt" type="submit"  name="newtestsubmit" value="Create">
+            <input class="btt" type="submit"  name="newtestsubmit" value="JOIN">
             <div class="btt" onclick="pop()" type="button">Cancel</div>
         </div>
         </form>
